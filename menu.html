@@ -21,7 +21,7 @@
 
 <!-- Back to Top Button -->
 <button id="backToTop" title="Back to top"
-  class="hidden fixed bottom-6 right-6 z-50 bg-[#4d1225] hover:bg-[#3a0f1d] text-white px-4 py-2 rounded-full shadow-lg transition">
+  class="hidden fixed bottom-6 right-6 z-50 bg-[#5aa6a7] hover:bg-[#4f9192] text-black px-4 py-2 rounded-full shadow-lg transition">
   ↑ Top
 </button>
 
@@ -47,18 +47,39 @@
 <body class="bg-white">
 
 <!-- Navigation -->
-<nav class="[background-color:#4d1225] shadow-sm fixed w-full z-10">
+<nav class="[background-color:#aae2e3] shadow-sm fixed w-full z-10">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-between items-center h-20">
-      <a href="index.html" class="text-white title-font text-2xl font-semibold">Bonjour Montclair</a>
+      <a href="index.html" class="text-black title-font text-2xl font-semibold">Bonjour Montclair</a>
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-8">
-          <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 text-sm">Home</a>
-          <a href="index.html#about" class="text-gray-300 hover:text-white px-3 py-2 text-sm">About</a>
-          <a href="menu.html" class="text-white font-bold px-3 py-2 text-sm">Menu</a>
-          <a href="index.html#contact" class="text-gray-300 hover:text-white px-3 py-2 text-sm">Contact</a>
+          <a href="index.html" class="text-black hover:[color:#5aa6a7] transition px-3 py-2 text-sm font-semibold">Home</a>
+          <a href="index.html#order-online" class="text-black hover:[color:#5aa6a7] transition px-3 py-2 text-sm font-semibold">Order</a>
+          <a href="menu.html" class="text-black hover:[color:#5aa6a7] transition font-bold px-3 py-2 text-sm font-semibold">Menu</a>
+          <a href="index.html#contact" class="text-black hover:[color:#5aa6a7] transition px-3 py-2 text-sm font-semibold">Contact</a>
         </div>
       </div>
+
+      <!-- Hamburger Button (visible on small screens) -->
+      <div class="md:hidden">
+        <button class="mobile-menu-button p-2 focus:outline-none text-black">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu hidden md:hidden [background-color:#aae2e3] shadow-lg">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="index.html" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Home</a>
+      <a href="index.html#order-online" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Order</a>
+      <a href="menu.html" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Menu</a>
+      <a href="index.html#contact" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Contact</a>
     </div>
   </div>
 </nav>
@@ -73,38 +94,395 @@
     <!-- Category Navigation -->
     <div class="flex flex-wrap justify-center gap-4 mb-8">
       <a href="#sandwiches" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Sandwiches</a>
-      <a href="#salads" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Salads</a>
-      <a href="#beverages" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Beverages</a>
       <a href="#crepes" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Crêpes</a>
       <a href="#sweet-crepes" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Sweet Crêpes</a>
+      <a href="#salads" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Salads</a>
+      <a href="#beverages" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Beverages</a>
     </div>
   </div>
 </section>
 
 <!-- Menu Sections -->
 <section class="pb-20 scroll-smooth">
-  <div class="container mx-auto px-6 space-y-24">
+  <div class="container mx-auto px-6 space-y-46">
 
     <!-- Bonjour Sandwiches -->
     <div id="sandwiches" class="scroll-mt-28">
-      <h2 class="title-font text-3xl font-bold text-gray-800 mb-6 text-center">Bonjour Sandwiches</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Croque Monsieur</h3>
-          <p class="text-gray-600 mb-1">French ham & cheese sandwich with béchamel</p>
-          <span class="text-amber-600 font-semibold">$14.00</span>
+      <div id="sandwiches" class="scroll-mt-28">
+        <h2 class="title-font text-3xl font-bold text-gray-800 mb-2 text-center">Bonjour Sandwiches</h2>
+        <p class="text-center text-gray-600 mb-1 italic">Served with Greens</p>
+        <p class="text-center text-gray-600 mb-6 italic">Wraps and Multigrain Bread Available – Fruits $3.50 extra</p>      
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Example item -->
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 1</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 2</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 3</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 4</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 5</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 6</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 7</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 8</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 9</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 10</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 11</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 12</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 13</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 14</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 15</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 16</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 17</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 18</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 19</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 20</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 21</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 22</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 23</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 24</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 25</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 26</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 2</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 27</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 1</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sandwich 28</h3>
+            <p class="text-gray-600 mb-1">Description for Sandwich 28</p>
+            <span class="text-amber-600 font-semibold">$0.00</span>
+          </div>
         </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Jambon-Beurre</h3>
-          <p class="text-gray-600 mb-1">Ham, butter, and cornichons on baguette</p>
-          <span class="text-amber-600 font-semibold">$11.50</span>
-        </div>
-      </div>
     </div>
 
+    <div class="text-center mt-16">
+      <h2 class="title-font text-2xl md:text-3xl font-bold text-gray-800 mb-2">FRESH SOUPS MADE DAILY</h2>
+      <p class="text-gray-700">Small: $6.50 &nbsp; | &nbsp; Large: $7.50 &nbsp; | &nbsp; 1 Quart: $13.00</p>
+    </div>
+
+    <hr class="border-t border-black my-16 w-3/4 mx-auto" />
+
+     <!-- Bonjour Crêpes -->
+     <div id="crepes" class="scroll-mt-28 mt-20">
+      <h2 class="title-font text-3xl font-bold text-gray-800 mb-2 text-center">Bonjour Crêpes</h2>
+      <p class="text-center text-gray-600 mb-1 italic">Served with Greens</p>
+      <p class="text-center text-gray-600 mb-6 italic">Gluten-Free Crêpes Available – Fruits $3.50 extra</p> 
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Crêpe 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 1</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 1</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 2</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 3</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 4</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 5</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 6</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 7</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 8</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 9</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 10</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 11</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 12</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 13</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 14</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 15</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 16</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 17</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 18</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 19</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 20</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 21</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 22</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 23</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 24</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 25</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 26</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe 27</h3>
+          <p class="text-gray-600 mb-1">Description for Crêpe 2</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+      
+        <!-- Repeat this structure for Crêpe 3 to Crêpe 27 -->
+      
+    </div>
+    <div class="mt-10 text-center">
+      <p class="text-xl text-gray-700 italic mb-2 font-medium">Customized Crêpes with up to three fillings:</p>
+      <p class="text-lg text-gray-700 italic leading-relaxed">
+        Ham, swiss, feta, gouda, spinach, portobello, onion, chicken,<br />
+        peppers, veggies, steak, prosciutto, goat cheese, shrimp,<br />
+        turkey, tomato, roasted peppers — <strong>$17.00</strong><br />
+        <span class="block mt-1">With two meats <strong>$19.00</strong></span>
+      </p>
+    </div>
+    
+    
+
+    <hr class="border-t border-black my-16 w-3/4 mx-auto" />
+
+    <!-- Bonjour Sweet Crêpes -->
+    <div id="sweet-crepes" class="scroll-mt-28 mt-20">
+      <h2 class="title-font text-3xl font-bold text-gray-800 mb-6 text-center">Bonjour Sweet Crêpes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Sweet Crêpe Items -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 1</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 2</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 3</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 4</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 5</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 6</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 7</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 8</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 9</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 10</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 11</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 12</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 13</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 14</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 15</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Sweet Crêpe 16</h3>
+          <p class="text-gray-600 mb-1">Description</p>
+          <span class="text-amber-600 font-semibold">$0.00</span>
+        </div>
+      </div>
+      
+    </div>
+
+    <hr class="border-t border-black my-16 w-3/4 mx-auto" />
+
+
     <!-- Bonjour Salads -->
-    <div id="salads" class="scroll-mt-28">
-      <h2 class="title-font text-3xl font-bold text-gray-800 mb-6 text-center">Bonjour Salads</h2>
+    <div id="salads" class="scroll-mt-28 mt-20">
+      <h2 class="title-font text-3xl font-bold text-gray-800 mb-6 text-center">Bonjour Salads</h2>    
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-gray-50 p-6 rounded-lg shadow-md">
           <h3 class="text-2xl font-bold text-gray-800 mb-2">Salade Niçoise</h3>
@@ -119,8 +497,10 @@
       </div>
     </div>
 
+    <hr class="border-t border-black my-16 w-3/4 mx-auto" />
+
     <!-- Bonjour Beverages -->
-    <div id="beverages" class="scroll-mt-28">
+    <div id="beverages" class="scroll-mt-28 mt-20">
       <h2 class="title-font text-3xl font-bold text-gray-800 mb-6 text-center">Bonjour Beverages</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-gray-50 p-6 rounded-lg shadow-md">
@@ -136,65 +516,31 @@
       </div>
     </div>
 
-    <!-- Bonjour Crêpes -->
-    <div id="crepes" class="scroll-mt-28">
-      <h2 class="title-font text-3xl font-bold text-gray-800 mb-6 text-center">Bonjour Crêpes</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Savory Crêpe Lorraine</h3>
-          <p class="text-gray-600 mb-1">Ham, Swiss cheese, and béchamel sauce</p>
-          <span class="text-amber-600 font-semibold">$12.00</span>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Spinach & Mushroom Crêpe</h3>
-          <p class="text-gray-600 mb-1">With creamy garlic sauce</p>
-          <span class="text-amber-600 font-semibold">$13.00</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bonjour Sweet Crêpes -->
-    <div id="sweet-crepes" class="scroll-mt-28">
-      <h2 class="title-font text-3xl font-bold text-gray-800 mb-6 text-center">Bonjour Sweet Crêpes</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Crêpe Nutella</h3>
-          <p class="text-gray-600 mb-1">Topped with fresh strawberries and whipped cream</p>
-          <span class="text-amber-600 font-semibold">$9.00</span>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Lemon Sugar Crêpe</h3>
-          <p class="text-gray-600 mb-1">Classic sweet crêpe with citrus zest</p>
-          <span class="text-amber-600 font-semibold">$8.00</span>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
 
 
 <!-- Footer -->
-<footer class="[background-color:#201006] text-white py-12">
+<footer class="[background-color:#aae2e3] text-black py-12">
   <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <div>
         <h3 class="title-font text-xl font-bold mb-4">Bonjour Montclair</h3>
         <p class="mb-4">Authentic French café culture in Montclair, NJ</p>
         <div class="flex space-x-4">
-          <a href="#" class="text-white hover:text-amber-400"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-white hover:text-amber-400"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="text-white hover:text-amber-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-black hover:[color:#5aa6a7] transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-black hover:[color:#5aa6a7] transition"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-black hover:[color:#5aa6a7] transition"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
       <div>
         <h3 class="title-font text-xl font-bold mb-4">Quick Links</h3>
         <ul class="space-y-2">
-          <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
-          <li><a href="index.html#about" class="hover:text-amber-400">About</a></li>
-          <li><a href="menu.html" class="hover:text-amber-400">Menu</a></li>
-          <li><a href="index.html#contact" class="hover:text-amber-400">Contact</a></li>
+          <li><a href="index.html" class="hover:[color:#5aa6a7] transition">Home</a></li>
+          <li><a href="index.html#order-online" class="hover:[color:#5aa6a7] transition">Order</a></li>
+          <li><a href="menu.html" class="hover:[color:#5aa6a7] transition">Menu</a></li>
+          <li><a href="index.html#contact" class="hover:[color:#5aa6a7] transition">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -209,11 +555,13 @@
         <p class="mb-4">Get updates on new items & events.</p>
         <form class="flex">
           <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l text-gray-900 focus:outline-none">
-          <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-4 py-2 rounded-r"><i class="fas fa-paper-plane"></i></button>
+          <button type="submit" class="[background-color:#5aa6a7] hover:[background-color:#4b8e8f] px-4 py-2 rounded-r text-white transition">
+            <i class="fas fa-paper-plane"></i>
+          </button>
         </form>
       </div>
     </div>
-    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-black">
       <p>&copy; 2025 Bonjour Montclair. All rights reserved.</p>
     </div>
   </div>
@@ -230,5 +578,16 @@
     });
   });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.querySelector(".mobile-menu-button");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  });
+</script>
+
 </body>
 </html>
