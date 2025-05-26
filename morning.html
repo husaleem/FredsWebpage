@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Menu - Bonjour Montclair</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .title-font {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to top"
+  class="hidden fixed bottom-6 right-6 z-50 bg-[#5aa6a7] hover:bg-[#4f9192] text-black px-4 py-2 rounded-full shadow-lg transition">
+  ↑ Top
+</button>
+
+<script>
+  const backToTopButton = document.getElementById("backToTop");
+
+  // Show or hide the button
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.remove("hidden");
+    } else {
+      backToTopButton.classList.add("hidden");
+    }
+  });
+
+  // Scroll back to top smoothly
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+
+<body class="bg-white">
+
+<!-- Navigation -->
+<nav class="[background-color:#aae2e3] shadow-sm fixed w-full z-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between items-center h-20">
+      <a href="index.html" class="text-black title-font text-2xl font-semibold">Bonjour Montclair</a>
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-8">
+          <a href="index.html" class="text-black hover:[color:#5aa6a7] transition px-3 py-2 text-sm font-semibold">Home</a>
+          <a href="index.html#order-online" class="text-black hover:[color:#5aa6a7] transition px-3 py-2 text-sm font-semibold">Order</a>
+          <a href="menu.html" class="text-black hover:[color:#5aa6a7] transition font-bold px-3 py-2 text-sm font-semibold">Menu</a>
+          <a href="index.html#contact" class="text-black hover:[color:#5aa6a7] transition px-3 py-2 text-sm font-semibold">Contact</a>
+        </div>
+      </div>
+
+      <!-- Hamburger Button (visible on small screens) -->
+      <div class="md:hidden">
+        <button class="mobile-menu-button p-2 focus:outline-none text-black">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu hidden md:hidden [background-color:#aae2e3] shadow-lg">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="index.html" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Home</a>
+      <a href="index.html#order-online" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Order</a>
+      <a href="menu.html" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Menu</a>
+      <a href="index.html#contact" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Menu Header -->
+<!-- Menu Header + Category Navbar -->
+<section class="pt-32 pb-6 bg-white text-center">
+  <div class="container mx-auto px-6">
+    <h1 class="title-font text-4xl md:text-5xl font-bold mb-4 text-gray-800">Our Full Menu</h1>
+    <p class="text-gray-700 max-w-2xl mx-auto mb-6">Explore all our categories: sandwiches, salads, beverages, and crêpes.</p>
+
+    <!-- Category Navigation -->
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <a href="sandwiches.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Sandwiches</a>
+      <a href="crepes.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Crêpes</a>
+      <a href="sweet-crepes.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Sweet Crêpes</a>
+      <a href="morning.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Morning Suggestions</a>
+      <a href="salads.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Salads</a>
+      <a href="beverages.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Beverages</a>
+    </div>
+  </div>
+</section>
+
+<section class="pb-20 scroll-smooth">
+    <div class="container mx-auto px-6 space-y-46">
+
+<!-- Morning Suggestions -->
+<div id="morning" class="scroll-mt-28">
+    <h2 class="title-font text-3xl font-bold text-gray-800 mb-6 text-center">Morning Suggestions</h2> 
+    <p class="text-center text-gray-600 mb-6 italic">On Croissant $2.00 Extra</p>    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Egg on Roll</h3>
+        <span style="color: #5aa6a7;" class="font-semibold">$6.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Egg and Cheese on Roll</h3>
+        <span style="color: #5aa6a7;" class="font-semibold">$8.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Sausage, Bacon, or Ham</h3>
+        <span style="color: #5aa6a7;" class="font-semibold">$9.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Protein Boost</h3>
+        <p class="text-gray-600 mb-1">Steak, Eggs, Cheese on Roll</p>
+        <span style="color: #5aa6a7;" class="font-semibold">$18.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">2 Eggs</h3>
+        <p class="text-gray-600 mb-1">Any style, served with fresh baked croissant</p>
+        <span style="color: #5aa6a7;" class="font-semibold">$10.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Croissant or Muffin</h3>
+        <span style="color: #5aa6a7;" class="font-semibold">$4.50</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">3 Egg Omelette</h3>
+        <p class="text-gray-600 mb-1">Served with up to 2 fillings with fresh baked croissant (cheddar, swiss, feta, goat cheese, mozzarella, spinach, peppers, portobello, onion, ham, tomato)</p>
+        <p class="text-gray-600 mb-1"><strong>Add Bacon or Sausage $16.00</strong></p>
+        <span style="color: #5aa6a7;" class="font-semibold">$13.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Morning Crepe with Eggs</h3>
+        <p class="text-gray-600 mb-1">With 2 fillings (ham, swiss, feta, tomato, spinach, peppers, onions, portobello, goat cheese)</p>
+        <span style="color: #5aa6a7;" class="font-semibold">$14.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Fruit Crepe</h3>
+        <p class="text-gray-600 mb-1">With 2 fillings (fresh berries, banana, caramelized apples, with whipped cream)</p>
+        <span style="color: #5aa6a7;" class="font-semibold">$13.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">French Toast Bonjour</h3>
+        <p class="text-gray-600 mb-1">With Croissant and Caramelized Apples</p>
+        <span style="color: #5aa6a7;" class="font-semibold">$12.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Fresh Fruit</h3>
+        <p class="text-gray-600 mb-1">Strawberry, Pineapple, Melons</p>
+        <span style="color: #5aa6a7;" class="font-semibold">$9.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Side of Fruits</h3>
+        <span style="color: #5aa6a7;" class="font-semibold">$4.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Side of Bacon, Sausage, Turkey Bacon or Chicken Sausage</h3>
+        <span style="color: #5aa6a7;" class="font-semibold">$5.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Avocado Toast</h3>
+        <p class="text-gray-600 mb-1">Multigrain Toast, Fresh Greens, Goat Cheese, 2 Sunny Side Up Eggs</p>
+        <span style="color: #5aa6a7;" class="font-semibold">$14.00</span>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Health Start</h3>
+        <p class="text-gray-600 mb-1">Turkey Bacon, Avocado, Egg White, Swiss Cheese, on a Wrap</p>
+        <span style="color: #5aa6a7;" class="font-semibold">$14.00</span>
+      </div>
+    </div>
+  </div>

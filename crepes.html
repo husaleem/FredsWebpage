@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Menu - Bonjour Montclair</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .title-font {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to top"
+  class="hidden fixed bottom-6 right-6 z-50 bg-[#5aa6a7] hover:bg-[#4f9192] text-black px-4 py-2 rounded-full shadow-lg transition">
+  ↑ Top
+</button>
+
+<script>
+  const backToTopButton = document.getElementById("backToTop");
+
+  // Show or hide the button
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.remove("hidden");
+    } else {
+      backToTopButton.classList.add("hidden");
+    }
+  });
+
+  // Scroll back to top smoothly
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+
+<body class="bg-white">
+
+<!-- Navigation -->
+<nav class="[background-color:#aae2e3] shadow-sm fixed w-full z-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between items-center h-20">
+      <a href="index.html" class="text-black title-font text-2xl font-semibold">Bonjour Montclair</a>
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-8">
+          <a href="index.html" class="text-black hover:[color:#5aa6a7] transition px-3 py-2 text-sm font-semibold">Home</a>
+          <a href="index.html#order-online" class="text-black hover:[color:#5aa6a7] transition px-3 py-2 text-sm font-semibold">Order</a>
+          <a href="menu.html" class="text-black hover:[color:#5aa6a7] transition font-bold px-3 py-2 text-sm font-semibold">Menu</a>
+          <a href="index.html#contact" class="text-black hover:[color:#5aa6a7] transition px-3 py-2 text-sm font-semibold">Contact</a>
+        </div>
+      </div>
+
+      <!-- Hamburger Button (visible on small screens) -->
+      <div class="md:hidden">
+        <button class="mobile-menu-button p-2 focus:outline-none text-black">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu hidden md:hidden [background-color:#aae2e3] shadow-lg">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="index.html" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Home</a>
+      <a href="index.html#order-online" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Order</a>
+      <a href="menu.html" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Menu</a>
+      <a href="index.html#contact" class="block px-3 py-2 text-black hover:[color:#5aa6a7] transition">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Menu Header -->
+<!-- Menu Header + Category Navbar -->
+<section class="pt-32 pb-6 bg-white text-center">
+  <div class="container mx-auto px-6">
+    <h1 class="title-font text-4xl md:text-5xl font-bold mb-4 text-gray-800">Our Full Menu</h1>
+    <p class="text-gray-700 max-w-2xl mx-auto mb-6">Explore all our categories: sandwiches, salads, beverages, and crêpes.</p>
+
+    <!-- Category Navigation -->
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <a href="sandwiches.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Sandwiches</a>
+      <a href="crepes.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Crêpes</a>
+      <a href="sweet-crepes.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Sweet Crêpes</a>
+      <a href="morning.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Morning Suggestions</a>
+      <a href="salads.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Salads</a>
+      <a href="beverages.html" class="text-sm font-medium px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">Beverages</a>
+    </div>
+  </div>
+</section>
+
+<section class="pb-20 scroll-smooth">
+    <div class="container mx-auto px-6 space-y-46">
+
+ <!-- Bonjour Crêpes -->
+     <div id="crepes" class="scroll-mt-28">
+      <h2 class="title-font text-3xl font-bold text-gray-800 mb-2 text-center">Bonjour Crêpes</h2>
+      <p class="text-center text-gray-600 mb-1 italic">Served with Greens</p>
+      <p class="text-center text-gray-600 mb-6 italic">Gluten-Free Crêpes Available – Fruits $3.50 extra</p> 
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Crêpe 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Eggplant, Mozzarella, Roasted Peppers, Tomato, Pesto</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$14.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Ham, Swiss, Portobello</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$14.00</span>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Ham, Swiss, Tomato</h3>
+        
+          <span style="color: #5aa6a7;" class="font-semibold">$14.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Turkey, Swiss, Tomato</h3>
+         
+          <span style="color: #5aa6a7;" class="font-semibold">$14.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Turkey, Bacon, Tomato, Swiss</h3>
+         
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Turkey, Goat Cheese, Tomato, Pesto</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Prociutto, Ham, Tomato, Pesto</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Prosciutto, Mozzarella, Tomato, Pesto</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Portobello, Mushroom, Spinach, Onion, Pinenuts, Cream</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Portobello, Mushroom, Spinach, Feta, Onion</h3>
+     
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Spinach, Feta, Onion</h3>
+        
+          <span style="color: #5aa6a7;" class="font-semibold">$14.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Mixed Veggies, Swiss, Spinach</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Mixed Veggies, Goat Cheese</h3>
+        
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Asparagus, Ham, Bechamel</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Goat Cheese, Tomato, Basil</h3>
+   
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Goat Cheese, Shallots, Leaks</h3>
+        
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Smoked Salmon, Goat Cheese, Onion, Tomato, Pesto</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$17.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Grilled Chicken, Tomato, Basil</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$16.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Grilled Chicken, Mozzarella, Peppers, Spinach, Onion</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$16.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Grilled Chicken, Pesto, Pinenuts, Tomato</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$16.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Grilled Chicken, Portobello, Spinach, Cream, Onion</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$16.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Grilled Chicken, Florentine, Ham, Spinach, Bechamel</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$16.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Steak, Onion, Pepper</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$17.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Steak, Portobello, Swiss</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$17.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Steak, Spinach, Portobello, Cream</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$17.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Shrimp, Spinach, Garlic, Pinenuts</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div><div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Shrimp, Tomato, Cream</h3>
+          
+          <span style="color: #5aa6a7;" class="font-semibold">$15.00</span>
+        </div>
+      
+        <!-- Repeat this structure for Crêpe 3 to Crêpe 27 -->
+      
+    </div>
+    <div class="mt-10 text-center">
+      <p class="text-xl text-gray-700 italic mb-2 font-medium">Customized Crêpes with up to three fillings:</p>
+      <p class="text-lg text-gray-700 italic leading-relaxed">
+        Ham, swiss, feta, gouda, spinach, portobello, onion, chicken,<br />
+        peppers, veggies, steak, prosciutto, goat cheese, shrimp,<br />
+        turkey, tomato, roasted peppers — <strong>$17.00</strong><br />
+        <span class="block mt-1">With two meats <strong>$19.00</strong></span>
+      </p>
+    </div>
+      
